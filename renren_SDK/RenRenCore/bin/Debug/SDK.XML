@@ -1,0 +1,4203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RenrenCore</name>
+    </assembly>
+    <members>
+        <member name="M:RenrenCore.Apis.API.LogIn(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatus(System.String,System.String)">
+            <summary>
+            获取登录用户当前状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatus(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户最近状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatus(System.String,System.String,System.Int32,System.Int64)">
+            <summary>
+            获取指定用户指定状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="statusId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatusList(System.String,System.String)">
+            <summary>
+            获取登录用户信息列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatusList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户信息列表（支持扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatusComments(System.String,System.String,System.Int64,System.Int32)">
+            <summary>
+            获取指定状态的评论列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="statusId"></param>
+            <param name="ownerId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetStatusComments(System.String,System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定状态的评论列表（支持扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="statusId"></param>
+            <param name="ownerId"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="withStatusDetail"></param>
+            <param name="needSort"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetBlogList(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户的日志列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetBlogList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户的日志列表（支持扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetBlog(System.String,System.String,System.Int32,System.Int64)">
+            <summary>
+            获取指定日志信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="blogId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetBlogComment(System.String,System.String,System.Int32,System.Int64,System.Int32)">
+            <summary>
+            获取指定日志评论信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="blogId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetFriendList(System.String,System.String)">
+            <summary>
+            获取当前用户好友列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetFriendList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户好友列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="page"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetAlbumList(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户相册列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetAlbumList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户相册列表 可扩展
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetPhotoList(System.String,System.String,System.Int32,System.Int64)">
+            <summary>
+            获取指定相册内照片列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="albumId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetPhotoList(System.String,System.String,System.Int32,System.Int64,System.Int32,System.Int32)">
+            <summary>
+            获取指定相册内照片列表[支持获取更多]
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="albumId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetPhotoComments(System.String,System.String,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            获取指定照片评论
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="albumId"></param>
+            <param name="picId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetPhotoComments(System.String,System.String,System.Int32,System.Int64,System.Int64,System.Int32,System.Int32,System.String)">
+            <summary>
+            获取指定照片评论[支持分页]
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="albumId"></param>
+            <param name="picId"></param>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String)">
+            <summary>
+            获取登录用户新鲜事
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户新鲜事
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取新鲜事（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetUserInfo(System.String,System.String)">
+            <summary>
+            获取登录用户账户信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetUserInfo(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户账户信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetVisitorList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取登录用户最近来访
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetVisitorList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户最近来访
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetGossips(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户留言板
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetGossips(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定用户留言板（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetMessages(System.String,System.String)">
+            <summary>
+            获取站内信
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetMessages(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取站内信（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetRequestFriendList(System.String,System.String)">
+            <summary>
+            获取登录用户好友申请列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetRequestFriendList(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取登录用户好友申请列表（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="excludeList"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="delNew"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetCommonFriends(System.String,System.String,System.Int32)">
+            <summary>
+            获取与指定好友的公共好友
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetCommonFriends(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取与指定好友的公共好友（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="hasHeadImg"></param>
+            <param name="hasNetwork"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.AcceptFriendRequest(System.String,System.String,System.Int32)">
+            <summary>
+            接受好友申请
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.DenyFriendRequest(System.String,System.String,System.Int32)">
+            <summary>
+            忽略好友申请
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetNewsCount(System.String,System.String)">
+            <summary>
+            获取消息数量
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetNewsList(System.String,System.String)">
+            <summary>
+            获取消息列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.MakeNewsToReadState(System.String,System.String,System.Int64)">
+            <summary>
+            将消息置为已读
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="newsId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetTheShare(System.String,System.String,System.Int32,System.Int64)">
+            <summary>
+            获取指定分享
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetShareList(System.String,System.String)">
+            <summary>
+            获取分享列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetShareList(System.String,System.String,System.Int32)">
+            <summary>
+            获取分享列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetShareList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取分享列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetOnlineFriendList(System.String,System.String)">
+            <summary>
+            获取在线好友列表
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.CheckIsFriend(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            判断是否为好友
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userIdOne"></param>
+            <param name="userIdTwo"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.SetStatus(System.String,System.String,System.String,System.String)">
+            <summary>
+            发布新状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.ForwardStatus(System.String,System.String,System.String,System.Int64,System.Int32)">
+            <summary>
+            转发状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="status"></param>
+            <param name="statusId"></param>
+            <param name="ownerId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostBlog(System.String,System.String,System.String,System.String)">
+            <summary>
+            发布新日志
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="title"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostBlogComment(System.String,System.String,System.Int64,System.String,System.Int32)">
+            <summary>
+            评论日志
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="blogId"></param>
+            <param name="content"></param>
+            <param name="ownerUserId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostBlogComment(System.String,System.String,System.Int64,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            评论日志（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="blogId"></param>
+            <param name="content"></param>
+            <param name="ownerUserId"></param>
+            <param name="replayId"></param>
+            <param name="replayType"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostAlbumComment(System.String,System.String,System.Int32,System.Int64,System.String)">
+            <summary>
+            发表相册评论
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="albumId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostAlbumComment(System.String,System.String,System.Int32,System.Int64,System.String,System.Int32,System.Int32)">
+            <summary>
+            发表相册评论（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="albumId"></param>
+            <param name="content"></param>
+            <param name="replayUserId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostPhotoComment(System.String,System.String,System.Int32,System.Int64,System.String)">
+            <summary>
+            发表照片评论
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="photoId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostPhotoComment(System.String,System.String,System.Int32,System.Int64,System.String,System.Int32,System.Int32)">
+            <summary>
+            发表照片评论（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="photoId"></param>
+            <param name="content"></param>
+            <param name="replayUserId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostStatusComment(System.String,System.String,System.Int32,System.String,System.Int64)">
+            <summary>
+            评论状态
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="content"></param>
+            <param name="statusId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostStatusComment(System.String,System.String,System.Int32,System.String,System.Int64,System.Int32)">
+            <summary>
+            评论状态（可扩展）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="onwerId"></param>
+            <param name="content"></param>
+            <param name="statusId"></param>
+            <param name="replayUserId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.UploadPhoto(System.String,System.String,System.String)">
+            <summary>
+            上传图片至默认相册 未添加描述信息、相册等操作
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="basedata"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.UploadPhoto(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            发送图片
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="basedata"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostGossip(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            给指定好友留言
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostGossipByWhisper(System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            给指定好友留言[悄悄话]
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostGossip(System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            在指定留言板回复指定好友留言
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+            <param name="reUserId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostGossip(System.String,System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            在指定留言板回复指定好友留言
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+            <param name="reUserId"></param>
+            <param name="isWhisper">输入值为1表示悄悄话</param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.RequestFriend(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            好友申请
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostShare(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            发布分享（针对链接）
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="sourceType"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostShare(System.String,System.String,System.Int32,System.Int64,System.Int32)">
+            <summary>
+            发布分享
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="sourceType"></param>
+            <param name="id"></param>
+            <param name="ownerId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostShare(System.String,System.String,System.Int32,System.Int64,System.Int32,System.String,System.String)">
+            <summary>
+            发布分享(可扩展)
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="sourceType"></param>
+            <param name="id"></param>
+            <param name="ownerId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostCollect(System.String,System.String,System.Int32,System.Int64,System.Int32)">
+             <summary>
+            发布收藏 （可在PostShare里扩展这里为了不影响之前的逻辑先这么写会有冗余代码暂时这样吧）
+             </summary>
+             <param name="sessionKey"></param>
+             <param name="userSecretKey"></param>
+             <param name="sourceType"></param>
+             <param name="id"></param>
+             <param name="ownerId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostShareComment(System.String,System.String,System.Int64,System.Int32,System.String)">
+            <summary>
+            评论分享
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="shareId"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.PostShareComment(System.String,System.String,System.Int64,System.Int32,System.String,System.Int32)">
+            <summary>
+            评论分享 可扩展
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="shareId"></param>
+            <param name="userId"></param>
+            <param name="content"></param>
+            <param name="reUserid"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.AddNotification(System.String,System.String,System.String)">
+            <summary>
+            向人人服务器注册推送
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="uri"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetPageInfo(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定用户账户信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:RenrenCore.Apis.API.GetClientUpdateInfo(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取客户端的升级信息
+            </summary>
+            <param name="sessionKey"></param>
+            <param name="userSecretKey"></param>
+            <param name="phoneModel">手机型号</param>
+            <param name="phoneOS">手机操作系统</param>
+            <param name="pubDate">当前客户端的发布日期（打包时间 格式：20090909）</param>
+        </member>
+        <member name="T:RenrenCore.Common.BindableBase">
+            <summary>
+            Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> to simplify models.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.BindableBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Checks if a property already matches a desired value.  Sets the property and
+            notifies listeners only when necessary.
+            </summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">Reference to a property with both getter and setter.</param>
+            <param name="value">Desired value for the property.</param>
+            <param name="propertyName">Name of the property used to notify listeners.  This
+            value is optional and can be provided automatically when invoked from compilers that
+            support CallerMemberName.</param>
+            <returns>True if the value was changed, false if the existing value matched the
+            desired value.</returns>
+        </member>
+        <member name="M:RenrenCore.Common.BindableBase.OnPropertyChanged(System.String)">
+            <summary>
+            Notifies listeners that a property value has changed.
+            </summary>
+            <param name="propertyName">Name of the property used to notify listeners.  This
+            value is optional and can be provided automatically when invoked from compilers
+            that support <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute"/>.</param>
+        </member>
+        <member name="E:RenrenCore.Common.BindableBase.PropertyChanged">
+            <summary>
+            Multicast event for property change notifications.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.BooleanNegationConverter">
+            <summary>
+            Value converter that translates true to false and vice versa.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.BooleanToVisibilityConverter">
+            <summary>
+            Value converter that translates true to <see cref="F:Windows.UI.Xaml.Visibility.Visible"/> and false to
+            <see cref="F:Windows.UI.Xaml.Visibility.Collapsed"/>.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.LayoutAwarePage">
+            <summary>
+            Typical implementation of Page that provides several important conveniences:
+            <list type="bullet">
+            <item>
+            <description>Application view state to visual state mapping</description>
+            </item>
+            <item>
+            <description>GoBack, GoForward, and GoHome event handlers</description>
+            </item>
+            <item>
+            <description>Mouse and keyboard shortcuts for navigation</description>
+            </item>
+            <item>
+            <description>State management for navigation and process lifetime management</description>
+            </item>
+            <item>
+            <description>A default view model</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Common.LayoutAwarePage.DefaultViewModelProperty">
+            <summary>
+            Identifies the <see cref="P:RenrenCore.Common.LayoutAwarePage.DefaultViewModel"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RenrenCore.Common.LayoutAwarePage"/> class.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.GoHome(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate backward in the page's associated
+            <see cref="T:Windows.UI.Xaml.Controls.Frame"/> until it reaches the top of the navigation stack.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="e">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.GoBack(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate backward in the navigation stack
+            associated with this page's <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="e">Event data describing the conditions that led to the
+            event.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.GoForward(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate forward in the navigation stack
+            associated with this page's <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="e">Event data describing the conditions that led to the
+            event.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.CoreDispatcher_AcceleratorKeyActivated(Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs)">
+            <summary>
+            Invoked on every keystroke, including system keys such as Alt key combinations, when
+            this page is active and occupies the entire window.  Used to detect keyboard navigation
+            between pages even when the page itself doesn't have focus.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="args">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.CoreWindow_PointerPressed(Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs)">
+            <summary>
+            Invoked on every mouse click, touch screen tap, or equivalent interaction when this
+            page is active and occupies the entire window.  Used to detect browser-style next and
+            previous mouse button clicks to navigate between pages.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="args">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.StartLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler, typically on the <see cref="E:Windows.UI.Xaml.FrameworkElement.Loaded"/>
+            event of a <see cref="T:Windows.UI.Xaml.Controls.Control"/> within the page, to indicate that the sender should
+            start receiving visual state management changes that correspond to application view
+            state changes.
+            </summary>
+            <param name="sender">Instance of <see cref="T:Windows.UI.Xaml.Controls.Control"/> that supports visual state
+            management corresponding to view states.</param>
+            <param name="e">Event data that describes how the request was made.</param>
+            <remarks>The current view state will immediately be used to set the corresponding
+            visual state when layout updates are requested.  A corresponding
+            <see cref="E:Windows.UI.Xaml.FrameworkElement.Unloaded"/> event handler connected to
+            <see cref="M:RenrenCore.Common.LayoutAwarePage.StopLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)"/> is strongly encouraged.  Instances of
+            <see cref="T:RenrenCore.Common.LayoutAwarePage"/> automatically invoke these handlers in their Loaded and
+            Unloaded events.</remarks>
+            <seealso cref="M:RenrenCore.Common.LayoutAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)"/>
+            <seealso cref="M:RenrenCore.Common.LayoutAwarePage.InvalidateVisualState"/>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.StopLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler, typically on the <see cref="E:Windows.UI.Xaml.FrameworkElement.Unloaded"/>
+            event of a <see cref="T:Windows.UI.Xaml.Controls.Control"/>, to indicate that the sender should start receiving
+            visual state management changes that correspond to application view state changes.
+            </summary>
+            <param name="sender">Instance of <see cref="T:Windows.UI.Xaml.Controls.Control"/> that supports visual state
+            management corresponding to view states.</param>
+            <param name="e">Event data that describes how the request was made.</param>
+            <remarks>The current view state will immediately be used to set the corresponding
+            visual state when layout updates are requested.</remarks>
+            <seealso cref="M:RenrenCore.Common.LayoutAwarePage.StartLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)"/>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)">
+            <summary>
+            Translates <see cref="T:Windows.UI.ViewManagement.ApplicationViewState"/> values into strings for visual state
+            management within the page.  The default implementation uses the names of enum values.
+            Subclasses may override this method to control the mapping scheme used.
+            </summary>
+            <param name="viewState">View state for which a visual state is desired.</param>
+            <returns>Visual state name used to drive the
+            <see cref="T:Windows.UI.Xaml.VisualStateManager"/></returns>
+            <seealso cref="M:RenrenCore.Common.LayoutAwarePage.InvalidateVisualState"/>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.InvalidateVisualState">
+            <summary>
+            Updates all controls that are listening for visual state changes with the correct
+            visual state.
+            </summary>
+            <remarks>
+            Typically used in conjunction with overriding <see cref="M:RenrenCore.Common.LayoutAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)"/> to
+            signal that a different value may be returned even though the view state has not
+            changed.
+            </remarks>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property provides the group to be displayed.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.OnNavigatedFrom(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page will no longer be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property provides the group to be displayed.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.LoadState(System.Object,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Populates the page with content passed during navigation.  Any saved state is also
+            provided when recreating a page from a prior session.
+            </summary>
+            <param name="navigationParameter">The parameter value passed to
+            <see cref="M:Windows.UI.Xaml.Controls.Frame.Navigate(System.Type,System.Object)"/> when this page was initially requested.
+            </param>
+            <param name="pageState">A dictionary of state preserved by this page during an earlier
+            session.  This will be null the first time a page is visited.</param>
+        </member>
+        <member name="M:RenrenCore.Common.LayoutAwarePage.SaveState(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Preserves state associated with this page in case the application is suspended or the
+            page is discarded from the navigation cache.  Values must conform to the serialization
+            requirements of <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.
+            </summary>
+            <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+        </member>
+        <member name="P:RenrenCore.Common.LayoutAwarePage.DefaultViewModel">
+            <summary>
+            An implementation of <see cref="T:Windows.Foundation.Collections.IObservableMap`2"/> designed to be
+            used as a trivial view model.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.LayoutAwarePage.ObservableDictionary`2">
+            <summary>
+            Implementation of IObservableMap that supports reentrancy for use as a default view
+            model.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.RichTextColumns">
+            <summary>
+            Wrapper for <see cref="T:Windows.UI.Xaml.Controls.RichTextBlock"/> that creates as many additional overflow
+            columns as needed to fit the available content.
+            </summary>
+            <example>
+            The following creates a collection of 400-pixel wide columns spaced 50 pixels apart
+            to contain arbitrary data-bound content:
+            <code>
+            <RichTextColumns>
+                <RichTextColumns.ColumnTemplate>
+                    <DataTemplate>
+                        <RichTextBlockOverflow Width="400" Margin="50,0,0,0"/>
+                    </DataTemplate>
+                </RichTextColumns.ColumnTemplate>
+                
+                <RichTextBlock Width="400">
+                    <Paragraph>
+                        <Run Text="{Binding Content}"/>
+                    </Paragraph>
+                </RichTextBlock>
+            </RichTextColumns>
+            </code>
+            </example>
+            <remarks>Typically used in a horizontally scrolling region where an unbounded amount of
+            space allows for all needed columns to be created.  When used in a vertically scrolling
+            space there will never be any additional columns.</remarks>
+        </member>
+        <member name="F:RenrenCore.Common.RichTextColumns.RichTextContentProperty">
+            <summary>
+            Identifies the <see cref="P:RenrenCore.Common.RichTextColumns.RichTextContent"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Common.RichTextColumns.ColumnTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:RenrenCore.Common.RichTextColumns.ColumnTemplate"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.RichTextColumns.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RenrenCore.Common.RichTextColumns"/> class.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.RichTextColumns.ResetOverflowLayout(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Invoked when the content or overflow template is changed to recreate the column layout.
+            </summary>
+            <param name="d">Instance of <see cref="T:RenrenCore.Common.RichTextColumns"/> where the change
+            occurred.</param>
+            <param name="e">Event data describing the specific change.</param>
+        </member>
+        <member name="F:RenrenCore.Common.RichTextColumns._overflowColumns">
+            <summary>
+            Lists overflow columns already created.  Must maintain a 1:1 relationship with
+            instances in the <see cref="P:Windows.UI.Xaml.Controls.Panel.Children"/> collection following the initial
+            RichTextBlock child.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.RichTextColumns.MeasureOverride(Windows.Foundation.Size)">
+            <summary>
+            Determines whether additional overflow columns are needed and if existing columns can
+            be removed.
+            </summary>
+            <param name="availableSize">The size of the space available, used to constrain the
+            number of additional columns that can be created.</param>
+            <returns>The resulting size of the original content plus any extra columns.</returns>
+        </member>
+        <member name="M:RenrenCore.Common.RichTextColumns.ArrangeOverride(Windows.Foundation.Size)">
+            <summary>
+            Arranges the original content and all extra columns.
+            </summary>
+            <param name="finalSize">Defines the size of the area the children must be arranged
+            within.</param>
+            <returns>The size of the area the children actually required.</returns>
+        </member>
+        <member name="P:RenrenCore.Common.RichTextColumns.RichTextContent">
+            <summary>
+            Gets or sets the initial rich text content to be used as the first column.
+            </summary>
+        </member>
+        <member name="P:RenrenCore.Common.RichTextColumns.ColumnTemplate">
+            <summary>
+            Gets or sets the template used to create additional
+            <see cref="T:Windows.UI.Xaml.Controls.RichTextBlockOverflow"/> instances.
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Common.SuspensionManager">
+            <summary>
+            SuspensionManager captures global session state to simplify process lifetime management
+            for an application.  Note that session state will be automatically cleared under a variety
+            of conditions and should only be used to store information that would be convenient to
+            carry across sessions, but that should be disacarded when an application crashes or is
+            upgraded.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Common.SuspensionManager.SaveAsync">
+            <summary>
+            Save the current <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.  Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances
+            registered with <see cref="M:RenrenCore.Common.SuspensionManager.RegisterFrame(Windows.UI.Xaml.Controls.Frame,System.String)"/> will also preserve their current
+            navigation stack, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> an opportunity
+            to save its state.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been saved.</returns>
+        </member>
+        <member name="M:RenrenCore.Common.SuspensionManager.RestoreAsync">
+            <summary>
+            Restores previously saved <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.  Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances
+            registered with <see cref="M:RenrenCore.Common.SuspensionManager.RegisterFrame(Windows.UI.Xaml.Controls.Frame,System.String)"/> will also restore their prior navigation
+            state, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> an opportunity restore its
+            state.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been read.  The
+            content of <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/> should not be relied upon until this task
+            completes.</returns>
+        </member>
+        <member name="M:RenrenCore.Common.SuspensionManager.RegisterFrame(Windows.UI.Xaml.Controls.Frame,System.String)">
+            <summary>
+            Registers a <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instance to allow its navigation history to be saved to
+            and restored from <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.  Frames should be registered once
+            immediately after creation if they will participate in session state management.  Upon
+            registration if state has already been restored for the specified key
+            the navigation history will immediately be restored.  Subsequent invocations of
+            <see cref="M:RenrenCore.Common.SuspensionManager.RestoreAsync"/> will also restore navigation history.
+            </summary>
+            <param name="frame">An instance whose navigation history should be managed by
+            <see cref="T:RenrenCore.Common.SuspensionManager"/></param>
+            <param name="sessionStateKey">A unique key into <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/> used to
+            store navigation-related information.</param>
+        </member>
+        <member name="M:RenrenCore.Common.SuspensionManager.UnregisterFrame(Windows.UI.Xaml.Controls.Frame)">
+            <summary>
+            Disassociates a <see cref="T:Windows.UI.Xaml.Controls.Frame"/> previously registered by <see cref="M:RenrenCore.Common.SuspensionManager.RegisterFrame(Windows.UI.Xaml.Controls.Frame,System.String)"/>
+            from <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.  Any navigation state previously captured will be
+            removed.
+            </summary>
+            <param name="frame">An instance whose navigation history should no longer be
+            managed.</param>
+        </member>
+        <member name="M:RenrenCore.Common.SuspensionManager.SessionStateForFrame(Windows.UI.Xaml.Controls.Frame)">
+            <summary>
+            Provides storage for session state associated with the specified <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            Frames that have been previously registered with <see cref="M:RenrenCore.Common.SuspensionManager.RegisterFrame(Windows.UI.Xaml.Controls.Frame,System.String)"/> have
+            their session state saved and restored automatically as a part of the global
+            <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.  Frames that are not registered have transient state
+            that can still be useful when restoring pages that have been discarded from the
+            navigation cache.
+            </summary>
+            <remarks>Apps may choose to rely on <see cref="T:RenrenCore.Common.LayoutAwarePage"/> to manage
+            page-specific state instead of working with frame session state directly.</remarks>
+            <param name="frame">The instance for which session state is desired.</param>
+            <returns>A collection of state subject to the same serialization mechanism as
+            <see cref="P:RenrenCore.Common.SuspensionManager.SessionState"/>.</returns>
+        </member>
+        <member name="P:RenrenCore.Common.SuspensionManager.SessionState">
+            <summary>
+            Provides access to global session state for the current session.  This state is
+            serialized by <see cref="M:RenrenCore.Common.SuspensionManager.SaveAsync"/> and restored by
+            <see cref="M:RenrenCore.Common.SuspensionManager.RestoreAsync"/>, so values must be serializable by
+            <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> and should be as compact as possible.  Strings
+            and other self-contained data types are strongly recommended.
+            </summary>
+        </member>
+        <member name="P:RenrenCore.Common.SuspensionManager.KnownTypes">
+            <summary>
+            List of custom types provided to the <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> when
+            reading and writing session state.  Initially empty, additional types may be
+            added to customize the serialization process.
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.LogIn">
+            <summary>
+            “登陆”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetStatus">
+            <summary>
+            “获取状态”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetStatusList">
+            <summary>
+            “获取状态列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetStatusComments">
+            <summary>
+            “获取指定状态评论”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostStatusComment">
+            <summary>
+            “指定状态发布评论”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetFeed">
+            <summary>
+            “获取当前用户新鲜事内容”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetUserBlogs">
+            <summary>
+            “获取指定用户日志列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetBlog">
+            <summary>
+            “获取一篇日志全部信息”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetBlogComment">
+            <summary>
+            “获取一篇日志评论列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetFriends">
+            <summary>
+            “获取好友列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetAlbums">
+            <summary>
+            “获取相册列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetPhotos">
+            <summary>
+            “获取照片列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetPhotoComments">
+            <summary>
+            “获取照片评论列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostPhotoComment">
+            <summary>
+            “添加照片或相册评论”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetUserInfo">
+            <summary>
+            “获取个人主页所需信息”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetVisitors">
+            <summary>
+            “获取最近访问列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetGossips">
+            <summary>
+            “获取留言板”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetMessages">
+            <summary>
+            “获取站内信列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetFriendsRequest">
+            <summary>
+            “获取好友申请列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetSharedFriends">
+            <summary>
+            “获取共同好友”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.AcceptFriendRequest">
+            <summary>
+            “接受好友申请”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.DenyFriendRequest">
+            <summary>
+            “忽略好友申请”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetNewsList">
+            <summary>
+            “获取当前用户的消息列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetNewsCount">
+            <summary>
+            “获取当前用户的消息总数”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetTheShare">
+            <summary>
+            "获取分享"
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetShareList">
+            <summary>
+            “获取分享列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetOnlineFriendList">
+            <summary>
+            “获取在线好友列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.CheckAreFriends">
+            <summary>
+            “判断是否为好友”方法
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.SetStatus">
+            <summary>
+            “发布状态”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.ForwardStatus">
+            <summary>
+            “转发状态”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostBlogComment">
+            <summary>
+            “针对指定日志发布评论”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostBlog">
+            <summary>
+            “发布新日志”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostPhoto">
+            <summary>
+            “上传图片”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostGossip">
+            <summary>
+            “留言或回复留言”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.RequestFriend">
+            <summary>
+            “好友申请”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostShare">
+            <summary>
+            “发布分享”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.PostShareComment">
+            <summary>
+            “添加分享评论”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.AddNotification">
+            <summary>
+            “添加推送注册”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetUpldateInfo">
+            <summary>
+            获取客户端升级信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.ReadNewsById">
+            <summary>
+            “通过消息Id将消息置为已读“方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetShareComment">
+            <summary>
+            “获取分享评论列表”方法名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetPageInfo">
+            <summary>
+            获取公共主页的资料
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Constants.Method.GetPoilist">
+            <summary>
+            LBS
+            </summary>        
+        </member>
+        <member name="T:RenrenCore.AsyncArgs.RenRenResponseArg`1">
+            <summary>
+            The wrapper for RenRen service response
+            It is in charge of recording three things:
+            1, the overall response entity data if this request is passed
+            2, the local exception if it happened in local
+            3, the remote error if it return by server
+            </summary>
+            <typeparam name="EntityType">the entity type</typeparam>
+        </member>
+        <member name="M:RenrenCore.AsyncArgs.RenRenResponseArg`1.#ctor(`0)">
+            <summary>
+            Construct using entity data
+            </summary>
+            <param name="result">entity data</param>
+        </member>
+        <member name="M:RenrenCore.AsyncArgs.RenRenResponseArg`1.#ctor(System.Exception)">
+            <summary>
+            Construct using local exception
+            </summary>
+            <param name="ex">local exception</param>
+        </member>
+        <member name="M:RenrenCore.AsyncArgs.RenRenResponseArg`1.#ctor(RenrenCore.Entities.ErrorEntity)">
+            <summary>
+            Construct using remote error
+            </summary>
+            <param name="error">remote error</param>
+        </member>
+        <member name="P:RenrenCore.AsyncArgs.RenRenResponseArg`1.Result">
+            <summary>
+            The overall response entity data
+            </summary>
+        </member>
+        <member name="P:RenrenCore.AsyncArgs.RenRenResponseArg`1.LocalError">
+            <summary>
+            The local exception recodeing
+            </summary>
+        </member>
+        <member name="P:RenrenCore.AsyncArgs.RenRenResponseArg`1.RemoteError">
+            <summary>
+            The remote error recording
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AcceptFriendEntity.result">
+            <summary>
+            为“1”表示成功
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.id">
+            <summary>
+            相册id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.img">
+            <summary>
+            相册封面？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.title">
+            <summary>
+            相册标题
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.create_time">
+            <summary>
+            相册创建时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.upload_time">
+            <summary>
+            相册最后更新时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.description">
+            <summary>
+            相册描述
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.location">
+            <summary>
+            位置信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.size">
+            <summary>
+            相册容量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.visible">
+            <summary>
+            是否可见？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.comment_count">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.user_id">
+            <summary>
+            相册所属人id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.has_password">
+            <summary>
+            相册是否有密码
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumEntity.album_type">
+            <summary>
+            相册类型
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumListEntity.album_list">
+            <summary>
+            相册列表信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AlbumListEntity.count">
+            <summary>
+            相册数量 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AtFriendInfoEntity.user_id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AtFriendInfoEntity.user_name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AtFriendInfoEntity.head_url">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.AtFriendInfoEntity.network">
+            <summary>
+            用户所属网络列表
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BirthdayEntity.year">
+             <summary>
+            生日年（返回x0后） 
+             </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BirthdayEntity.month">
+            <summary>
+            生日月
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BirthdayEntity.day">
+            <summary>
+            生日天
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogCommentEntity.count">
+            <summary>
+            一篇日志的评论数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogCommentEntity.comment_list">
+            <summary>
+            所有评论信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.id">
+            <summary>
+            日志id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.user_id">
+            <summary>
+            日志所有者id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.user_name">
+            <summary>
+            所有者姓名。 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.head_url">
+            <summary>
+            所有者头像。 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.title">
+            <summary>
+            日志标题。 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.time">
+            <summary>
+            发表时间。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.content">
+            <summary>
+            日志内容 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.view_count">
+            <summary>
+            查看次数。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.comment_count">
+            <summary>
+            评论次数。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogDetailEntity.visible">
+            <summary>
+            权限范围，有4个int值: 99(所有人),4(密码保护) ,1(好友), -1(仅自己可见)。 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.id">
+            <summary>
+            日志id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.time">
+            <summary>
+            发表时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.cate">
+            <summary>
+            日志种类
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.title">
+            <summary>
+            日志标题
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.content">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.view_count">
+            <summary>
+            查看次数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.comment_count">
+            <summary>
+            评论次数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogEntity.visible">
+            <summary>
+            权限范围，有4个int值: 99(所有人),4(密码保护) ,1(好友), -1(仅自己可见)。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogListEntity.user_id">
+            <summary>
+            用户id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogListEntity.user_name">
+            <summary>
+            用户名称 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogListEntity.count">
+            <summary>
+            日志个数 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.BlogListEntity.blog_list">
+            <summary>
+            日志数据 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.id">
+            <summary>
+            评论id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.user_id">
+            <summary>
+            评论者id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.user_name">
+            <summary>
+            评论者名字
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.head_url">
+            <summary>
+            评论者头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.time">
+            <summary>
+            评论时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommentEntity.whisper">
+            <summary>
+            是否是悄悄话(1：是，0：不是)
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommonReultEntity.result">
+            <summary>
+            成功添加评论返回值, 值为1
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommonFriendsEntity.count">
+            <summary>
+            共同好友数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.CommonFriendsEntity.friend_list">
+            <summary>
+            共同好友内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DenyFriendEntity.result">
+            <summary>
+            为1表示成功
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.id">
+            <summary>
+            表示新鲜事的id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.source_id">
+            <summary>
+            表示新鲜事内容主体的id，例如日志id、相册id和分享id等等
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.type">
+            <summary>
+            表示新鲜事类型
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.time">
+            <summary>
+            表示新鲜事更新时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.str_time">
+            <summary>
+            可选的格式化时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.user_id">
+            <summary>
+            表示新鲜事用户的id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.user_name">
+            <summary>
+            表示新鲜事用户的姓名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.head_url">
+            <summary>
+            表示新鲜事用户的头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.prefix">
+            <summary>
+            表示新鲜事内容的前缀
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.content">
+            <summary>
+            表示新鲜事用户自定义输入内容，状态
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.title">
+             <summary>
+            表示新鲜事的主题内容 
+             </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.url">
+            <summary>
+            表示新鲜事主题的相关链接
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.origin_type">
+            <summary>
+            表示新鲜事来源type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.origin_title">
+            <summary>
+            表示新鲜事来源描述
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.origin_img">
+            <summary>
+            表示新鲜事来源图标地址
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.origin_page_id">
+            <summary>
+            表示新鲜事来源pageid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.origin_url">
+            <summary>
+            表示新鲜事来源指定url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.description">
+            <summary>
+            表示新鲜事的具体内容 如日志内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.comment_count">
+            <summary>
+            表示评论的数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.comment_list">
+            <summary>
+            表示新鲜事中包含的评论内容，目前返回最新和最早的评论
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.attachement_list">
+            <summary>
+            附件列表
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.status_forward">
+            <summary>
+            转发状态源内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedEntity.share">
+            <summary>
+            分享的源信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedListEntity.feed_list">
+            <summary>
+            用户的新鲜事列表
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedListEntity.has_more">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedListEntity.is_mini_feed">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.user_id">
+            <summary>
+            共同好友的id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.user_name">
+            <summary>
+            共同好友名称
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.is_online">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.network">
+            <summary>
+            所在网络
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.group">
+            <summary>
+            所在分组
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendEntity.gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendListEntity.count">
+            <summary>
+            用户的全部好友数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FriendListEntity.friend_list">
+            <summary>
+            表示搜索匹配结果的具体内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityEntity.period_msg">
+            <summary>
+            1-period_msg
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityEntity.message">
+            <summary>
+            2-message
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityEntity.activity_icon">
+            <summary>
+            3-period_msg
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityEntity.url">
+            <summary>
+            4-message
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityEntity.type">
+            <summary>
+            5-type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityListEntity.activity_list">
+            <summary>
+            2-activity_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityListEntity.page_size">
+            <summary>
+            5-page_size
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.pid">
+            <summary>
+            1-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.name">
+            <summary>
+            2-name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.activity_caption">
+            <summary>
+            3-activity_caption
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.address">
+            <summary>
+            4-address
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.url">
+            <summary>
+            5-url  关联关系中活动的wap端详情页url地址
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.activity_contents">
+            <summary>
+            6-activity_contents  关联关系中活动的标题
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.distance">
+            <summary>
+            7-distance  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_count">
+            <summary>
+            8-event_count 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.from">
+            <summary>
+            9-from
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_type">
+            <summary>
+            10-event_type  关联关系中活动的类型
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.broad_sdate">
+            <summary>
+            11-broad_sdate  关联关系中活动的推广开始时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.broad_edate">
+            <summary>
+            12-broad_edate  关联关系中活动的推广结束时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_sdate">
+            <summary>
+            13-event_sdate  关联关系中活动的开始时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_edate">
+            <summary>
+            14-event_edate  关联关系中活动的结束时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_source">
+            <summary>
+            15-event_source  关联关系中活动的来源标识
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_source_wapurl">
+            <summary>
+            16-event_source_wapurl    关联关系中活动的来源wap地址 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_mobile_logourl">
+            <summary>
+            17-event_mobile_logourl  关联关系中活动的小图地址 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_web_logourl">
+            <summary>
+            18-event_web_logourl    关联关系中的活动的大图地址 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.longitude">
+            <summary>
+            19-longitude  关联关系中活动举行第的经度 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.latitude">
+            <summary>
+            20-longitude  关联关系中活动举行地的维度 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.description">
+            <summary>
+            21-description  关联关系中活动的描述 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.poi_type">
+            <summary>
+            22-poi_type  关联关系中活动的地点类型 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.group_buy_id">
+            <summary>
+            23-group_buy_id  团购类型活动 ,对象唯一标识ID 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.group_buy_original_price">
+            <summary>
+            24-group_buy_original_price  原价 ，适用于团购类型活动 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.group_buy_current_price">
+            <summary>
+            25-group_buy_current_price  现价 ，适用于团购类型活动 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.group_buy_rate">
+            <summary>
+            26-group_buy_rate  折扣 ，适用于团购类型活动 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.group_buy_spare">
+            <summary>
+            27-group_buy_spare 节省 ，适用于团购类型活动 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiEntity.event_id">
+            <summary>
+            28-event_id  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.poi_list">
+            <summary>
+            2-poi_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.page_size">
+            <summary>
+            5-page_size
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.need2deflect">
+            <summary>
+            6-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.locate_type">
+            <summary>
+            7-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.lat_gps">
+            <summary>
+            8-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ActivityPoiListEntity.lon_gps">
+            <summary>
+            9-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.user_id">
+            <summary>
+            2-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.content">
+            <summary>
+            3-content  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.new_content">
+            <summary>
+            4-new_content 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.root_content">
+            <summary>
+            5-root_content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.html_new_content">
+            <summary>
+            6-html_new_content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.html_root_content">
+            <summary>
+            7-html_root_content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.is_forward">
+            <summary>
+            8-is_forward
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.is_position">
+            <summary>
+            9-is_position 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.root_doing_user_id">
+            <summary>
+            10-root_doing_user_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.DoingInfoEntity.root_doing_user_name">
+            <summary>
+            11-location_name 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddCheckinCommentEntity.result">
+            <summary>
+            1-result
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationCommentEntity.result">
+            <summary>
+            1-result
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.result">
+            <summary>
+            1-result
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.message">
+            <summary>
+            2-message
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.lat_gps">
+            <summary>
+            3-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.lon_gps">
+            <summary>
+            4-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.need2deflect">
+            <summary>
+            5-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddEvaluationEntity.locate_type">
+            <summary>
+            6-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.base_info">
+            <summary>
+            1-base_info
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.distance">
+            <summary>
+            2-distance
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.lat_gps">
+            <summary>
+            3-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.lon_gps">
+            <summary>
+            4-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.need2deflect">
+            <summary>
+            5-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSAddPoiEntity.locate_type">
+            <summary>
+            6-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSCheckInEntity.lat_gps">
+            <summary>
+            1-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSCheckInEntity.lon_gps">
+            <summary>
+            2-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSCheckInEntity.need2deflect">
+            <summary>
+            3-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSCheckInEntity.result">
+            <summary>
+            4-result
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.user_id">
+            <summary>
+            1-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.user_name">
+            <summary>
+            2-user_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.gender">
+            <summary>
+            3-gender 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.head_url">
+            <summary>
+            4-head_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.reply_count">
+            <summary>
+            5-reply_count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.ugc_type">
+            <summary>
+            6-ugc_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.ugc_id">
+            <summary>
+            7-ugc_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.pid">
+            <summary>
+            8-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.longitude">
+            <summary>
+            9-longitude 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.latitude">
+            <summary>
+            10-latitude 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.location_name">
+            <summary>
+            11-location_name 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.biz_type">
+            <summary>
+            12-biz_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.biz_sub_type">
+            <summary>
+            13-biz_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.src_id">
+            <summary>
+            14-src_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.loc_type">
+            <summary>
+            15-loc_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.content">
+            <summary>
+            16-content 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.ubb_content">
+            <summary>
+            17-ubb_content 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.location_flow_photo">
+            <summary>
+            18-location_flow_photo 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.doing_info">
+            <summary>
+            19-doing_info 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.privacy">
+            <summary>
+            20-privacy 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.grid_id2">
+            <summary>
+            21-grid_id2 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.grid_id3">
+            <summary>
+            22-grid_id3 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.grid_id4">
+            <summary>
+            23-grid_id4 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.src_time">
+            <summary>
+            24-src_time 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.add_time">
+            <summary>
+            25-add_time 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.add_user_id">
+            <summary>
+            26-add_user_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.modify_time">
+            <summary>
+            27-modify_time 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.modify_user_id">
+            <summary>
+            28-modify_user_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.remark">
+            <summary>
+            29-remark  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LbsFeedInfoEntity.source_type_appid">
+            <summary>
+            30-source_type_appid 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFeedListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFeedListEntity.lbsFeedInfoList">
+            <summary>
+            2-lbsFeedInfoList
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.add_time">
+            <summary>
+            1-add time
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.data_type">
+            <summary>
+            2-Data type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.distance">
+            <summary>
+            3-Distance
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.head_url">
+             <summary>
+            4- head url
+             </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.latitude_gps">
+            <summary>
+            5-latitude_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.latitude_poi">
+            <summary>
+            6-latitude_poi
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.locate_type">
+            <summary>
+             7-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.longitude_gps">
+            <summary>
+             8-longitude_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.longitude_poi">
+            <summary>
+             9-longitude_poi
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.main_url">
+            <summary>
+             10-main_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.user_name">
+            <summary>
+             11-user_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.pid">
+            <summary>
+             12-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.poi_address">
+            <summary>
+             13-poi_address
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.poi_name">
+            <summary>
+             14-poi_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.poi_phone">
+            <summary>
+             15-poi_phone
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.privacy">
+            <summary>
+             16-privacy
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.status_text">
+            <summary>
+             17-status_text
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.tiny_url">
+            <summary>
+             18-tiny_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.user_id">
+            <summary>
+             19-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.lbs_id">
+            <summary>
+             20-lbs_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendEntity.source_id">
+            <summary>
+             21-source_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.friends_list">
+            <summary>
+            2-friends_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.lat_gps">
+            <summary>
+            3-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.lon_gps">
+            <summary>
+            4-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.page_size">
+            <summary>
+            5-page_size
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.need2deflect">
+            <summary>
+            6-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.locate_type">
+            <summary>
+            7-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.lat_deflect">
+            <summary>
+            8-lat_deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSFriendListEntity.lon_deflect">
+            <summary>
+            9-lon_deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyListEntity.pci">
+            <summary>
+            2-comment_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyListEntity.reply_list">
+            <summary>
+            3-reply_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.user_id">
+            <summary>
+            2-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.content">
+            <summary>
+            3-content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.user_name">
+            <summary>
+            4-user_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.time">
+            <summary>
+            5-time
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceReplyItemEntity.head_url">
+            <summary>
+            6-head_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentListEntity.comment_list">
+            <summary>
+            2-comment_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentListEntity.page_size">
+            <summary>
+            3-content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentListEntity.evaluation">
+            <summary>
+            4-evaluation
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.user_id">
+            <summary>
+            2-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.content">
+            <summary>
+            3-content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.user_name">
+            <summary>
+            4-user_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.time">
+            <summary>
+            5-time
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationCommentEntity.head_url">
+            <summary>
+            6-head_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationEntity.user_id">
+            <summary>
+            2-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationEntity.content">
+            <summary>
+            3-content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationEntity.comment_count">
+            <summary>
+            4-comment_count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetEvaluationEntity.time">
+            <summary>
+            5-time
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetNearByRecommendPoiExtraListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetNearByRecommendPoiExtraListEntity.poiDataExtraList">
+            <summary>
+            2-poiDataExtraList
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.pid">
+            <summary>
+            2-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.longitude">
+            <summary>
+            3-longitude
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.latitude">
+            <summary>
+            4-latitude
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.longitudeGps">
+            <summary>
+            5-longitudeGps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.latitudeGps">
+            <summary>
+            6-latitudeGps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.name">
+            <summary>
+            7-name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.address">
+            <summary>
+            8-address
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.phone">
+            <summary>
+            9-phone
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.note">
+            <summary>
+            10-note
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.country">
+            <summary>
+            11-country
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.province">
+            <summary>
+            12-province
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.city">
+            <summary>
+            13-city
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.cityCode">
+            <summary>
+            14-cityCode
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.district">
+            <summary>
+            15-district
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.street">
+            <summary>
+            16-note
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.sourceType">
+            <summary>
+            17-sourceType
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.poiCaption">
+            <summary>
+            18-poiCaption
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.poiType">
+            <summary>
+            19-poiType
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.ugc">
+            <summary>
+            20-ugc
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.friendsPointsCount">
+            <summary>
+            21-friendsPointsCount
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.friendsPhotoCount">
+            <summary>
+            22-friendsPhotoCount
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.friendsVisited">
+            <summary>
+            23-friendsVisited
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.totalVistited">
+            <summary>
+            24-totalVistited
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.hasActivity">
+            <summary>
+            25-hasActivity
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.latestFriendsPhotosList">
+            <summary>
+            26-latestFriendsPhotosList
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiDataExtraEntity.latestFriendsPointsList">
+            <summary>
+            27-latestFriendsPointsList
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.userId">
+            <summary>
+            2-user_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.userName">
+            <summary>
+            3-userName
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.srcId">
+            <summary>
+            4-srcId
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.content">
+            <summary>
+            5-content
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSLocationFlowLiteEntity.bizType">
+            <summary>
+            6-bizType
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetStaticMapEntity.static_MapUrl">
+            <summary>
+            1-static_MapUrl
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetStaticMapEntity.latitude">
+            <summary>
+            2-latitude
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSGetStaticMapEntity.longitude">
+            <summary>
+            3-longitude
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiCategoryListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiCategoryListEntity.category_list">
+            <summary>
+            2-category_list
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiCategoryEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSPoiCategoryEntity.name">
+            <summary>
+            2-name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSSavePoiDataEntity.pid">
+            <summary>
+            1-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSSavePoiDataEntity.code">
+            <summary>
+            2-code
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSSavePoiDataEntity.msg">
+            <summary>
+            3-msg
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSSubmitEntity.result">
+            <summary>
+            1-result
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.photo_id">
+            <summary>
+            1-photo_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.album_id">
+            <summary>
+            2-album_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.album_name">
+            <summary>
+            3-album_name 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.title">
+            <summary>
+            4-title 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.large_url">
+            <summary>
+            5-large_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.main_url">
+            <summary>
+            6-main_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.head_url">
+            <summary>
+            7-head_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LocationFlowPhotoEntity.tiny_url">
+            <summary>
+            8-tiny_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.count">
+            <summary>
+            1-count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.page_size">
+            <summary>
+            2-page_size
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.feed_list">
+            <summary>
+            3-feed_list 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.locate_type">
+            <summary>
+            4-locate_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.need2deflect">
+            <summary>
+            5-need2deflect
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.lat_gps">
+            <summary>
+            6-lat_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedListEntity.lon_gps">
+            <summary>
+            7-lon_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.add_time">
+            <summary>
+            1-add_time
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.data_type">
+            <summary>
+            2-data_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.distance">
+            <summary>
+            3-distance 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.head_url">
+            <summary>
+            4-head_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.latitude_gps">
+            <summary>
+            5-latitude_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.latitude_poi">
+            <summary>
+            6-latitude_poi
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.locate_type">
+            <summary>
+            7-locate_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.longitude_gps">
+            <summary>
+            8-longitude_gps
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.longitude_poi">
+            <summary>
+            9-longitude_poi 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.main_url">
+            <summary>
+            10-main_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.user_name">
+            <summary>
+            11-user_name 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.pid">
+            <summary>
+            12-pid 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.poi_address">
+            <summary>
+            13-poi_address 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.poi_name">
+            <summary>
+            14-poi_name 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.poi_phone">
+            <summary>
+            15-poi_phone 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.privacy">
+            <summary>
+            16-privacy 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.status_text">
+            <summary>
+            17-status_text 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.tiny_url">
+            <summary>
+            18-tiny_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.user_id">
+            <summary>
+            19-user_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.reply_count">
+            <summary>
+            20-reply_count 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.feed_image_url">
+            <summary>
+            21-feed_image_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.source_id">
+            <summary>
+            22-source_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.status_forward">
+            <summary>
+            23-status_forward  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.origin_type">
+            <summary>
+            24-origin_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.origin_title">
+            <summary>
+            25-origin_title 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.origin_url">
+            <summary>
+            26-origin_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.media_id">
+            <summary>
+            27-media_id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.attachement_list">
+            <summary>
+            28-attachement_list 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.lbs_id">
+            <summary>
+            29-remark  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.title">
+            <summary>
+            30-title 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.LBSNearbyFeedInfoEntity.prefix">
+            <summary>
+            31-prefix 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedStatusForwardEntity.id">
+            <summary>
+            1-id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedStatusForwardEntity.status">
+            <summary>
+            2-user_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedStatusForwardEntity.owner_id">
+            <summary>
+            3-gender 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedStatusForwardEntity.owner_name">
+            <summary>
+            4-owner_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.url">
+            <summary>
+            1-url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.type">
+            <summary>
+            2-type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.src">
+            <summary>
+            3-src 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.media_id">
+            <summary>
+            4-head_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.owner_id">
+            <summary>
+            5-reply_count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.digest">
+            <summary>
+            6-digest
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.FeedAttachmentEntity.main_url">
+            <summary>
+            7-main_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.pid">
+            <summary>
+            1-pid   poi id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.distance">
+            <summary>
+            2-distance    距离结果，单位为m
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.lat_gps">
+            <summary>
+            3-lat_gps    纬度
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.lon_gps">
+            <summary>
+            4-lon_gps    纬度
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.need2deflect">
+            <summary>
+            5-need2deflect    是否需要进行偏转
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.is_too_far_away">
+            <summary>
+            6-is_too_far_away    是否超出默认半径
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PlaceDistanceEntity.locate_type">
+            <summary>
+            7-locate_type    定位类型
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.pid">
+            <summary>
+            1-pid
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.poi_name">
+            <summary>
+            2-poi_name
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.poi_address">
+            <summary>
+            3-poi_address
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.map_url">
+            <summary>
+            4-map_url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.visit_count">
+            <summary>
+            5-visit_count
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.activity_count">
+            <summary>
+            6-activity_count 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.activity_contents">
+            <summary>
+            7-activity_count 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.nearby_activity_count">
+            <summary>
+            8-nearby_activity_count 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.lat">
+            <summary>
+            9-lat 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.lon">
+            <summary>
+            10-lon 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.activity_url">
+            <summary>
+            11-activity_url  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PoiBaseInfoEntity.detail_address">
+            <summary>
+            11-activity_url  
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SourceTypeAppidEntity.app_id">
+            <summary>
+            1-app_id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SourceTypeAppidEntity.source_type">
+            <summary>
+            2-source_type
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SourceTypeAppidEntity.source_url">
+            <summary>
+            3-source_url 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SourceTypeAppidEntity.feed_reply_type">
+            <summary>
+            4-feed_reply_type 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SourceTypeAppidEntity.source_name">
+            <summary>
+            5-source_name
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Entities.MessageEntity">
+            <summary>
+            站内信实体
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.id">
+            <summary>
+            表示站内信的id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.user_id">
+            <summary>
+            表示站内信发送者的id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.user_name">
+            <summary>
+            表示站内信发送者的姓名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.head_url">
+            <summary>
+            表示站内信发送者的头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.time">
+            <summary>
+            表示站内信的接收时间（long）
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.title">
+            <summary>
+            表示站内信的标题
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.content">
+            <summary>
+            表示站内信的发送者发送的最新内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.is_read">
+            <summary>
+            表示站内信是否已读 0,未读
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageEntity.is_out_message">
+            <summary>
+            表示站内信是否为外网邮箱发布 1,是 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageListEntity.unread_count">
+            <summary>
+            表示用户站内信未读取的数目
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageListEntity.count">
+            <summary>
+            表示用户站内信的总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageListEntity.page_size">
+            <summary>
+            表示当前的每个分页的数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.MessageListEntity.message_list">
+            <summary>
+            表示站内信的数据
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsCountEntity.gossip_reply_count">
+            <summary>
+            留言回复数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsCountEntity.message_count">
+            <summary>
+            站内信数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsCountEntity.friend_request_count">
+            <summary>
+            好友请求数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.id">
+            <summary>
+            合并消息的id数组
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.type">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.user_id">
+            <summary>
+            产生消息的用户ID数组（只显示前三个不同用户的id）
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.user_name">
+            <summary>
+            产生消息的用户姓名数组（只显示前三个不同用户的姓名）
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.head_url">
+            <summary>
+            产生消息的用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.source_id">
+            <summary>
+            消息对应的源内容的ID
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.owner_id">
+            <summary>
+            消息对应的源内容的用户ID
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.prefix">
+            <summary>
+            前缀
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.title">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.sufix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.brief">
+            <summary>
+            附加信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.latest">
+            <summary>
+            是否为未读消息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsEntity.user_count">
+            <summary>
+            包含人数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.NewsListEntity.news_list">
+            <summary>
+            所有消息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.id">
+            <summary>
+            公共主页id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.page_name">
+            <summary>
+            公共主页名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.head_url">
+            <summary>
+            公共主页头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.is_fan">
+            <summary>
+            当前用户是否是次公共主页的粉丝
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.is_checked">
+            <summary>
+            公共主页是否通过验证
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.status">
+            <summary>
+            公共主页状态
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.desc">
+            <summary>
+            公共主页描述
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.albums_count">
+            <summary>
+            公共主页相册个数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.blogs_count">
+            <summary>
+            公共主页日志数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.fans_count">
+            <summary>
+            公共主页粉丝数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.base_info">
+            <summary>
+            公共主页基本信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.detail_info">
+            <summary>
+            公共主页详细信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.contact_info">
+            <summary>
+            公共主页联系信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageInfoEntity.lagerHeaderUrl">
+            <summary>
+            大头像
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Entities.PageStatusEntity">
+            <summary>
+            公共主页状态信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageStatusEntity.status_id">
+            <summary>
+            状态id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageStatusEntity.time">
+            <summary>
+            状态时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageStatusEntity.content">
+            <summary>
+            状态内容
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Entities.PageBaseInfoEntity">
+            <summary>
+            公共主页状态信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageBaseInfoEntity.key">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PageBaseInfoEntity.value">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoCommentEntity.count">
+            <summary>
+            评论总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoCommentEntity.comment_list">
+            <summary>
+            所有评论信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.id">
+            <summary>
+            照片id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.album_id">
+            <summary>
+            相册id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.user_id">
+            <summary>
+            所有者id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.img_head">
+            <summary>
+            照片小图片
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.img_large">
+            <summary>
+            照片大图片
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.caption">
+            <summary>
+            照片描述
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.time">
+            <summary>
+            照片时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.view_count">
+            <summary>
+            浏览次数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.comment_count">
+            <summary>
+            评论次数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoEntity.user_name">
+            <summary>
+            所有者名称
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoListEntity.count">
+            <summary>
+            相册包含照片总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoListEntity.photo_list">
+            <summary>
+            相册包含的所有相片
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PhotoListEntity.album_name">
+            <summary>
+            相册名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.PostBlogEntity.id">
+            <summary>
+            日志id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestFriendsListEntity.count">
+            <summary>
+            好友申请总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestFriendsListEntity.page_size">
+            <summary>
+            当前请求列表分页每页的数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestFriendsListEntity.friend_apply_list">
+            <summary>
+            好友申请内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestUserEntity.user_id">
+            <summary>
+            申请人id 
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestUserEntity.user_name">
+            <summary>
+            申请人名称
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestUserEntity.head_url">
+            <summary>
+            申请人头像url
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestUserEntity.content">
+            <summary>
+            申请说明
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.RequestUserEntity.share_count">
+            <summary>
+            共同好友数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.SetStatusEntity.result">
+            <summary>
+            修改状态成功，值为1
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ShareCommentEntity.count">
+            <summary>
+            评论总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.ShareCommentEntity.comment_list">
+            <summary>
+            所有评论信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusCommentsEntity.count">
+            <summary>
+            评论总数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusCommentsEntity.page_size">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusCommentsEntity.comment_list">
+            <summary>
+            所有评论信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.id">
+            <summary>
+            状态id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.user_id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.time">
+            <summary>
+            状态时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.timestr">
+            <summary>
+            状态时间 string 表示
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.content">
+            <summary>
+            状态内容
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.comment_count">
+            <summary>
+            状态评论数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.user_name">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.head_url">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusEntity.origin">
+            <summary>
+            转发原状态
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusListEntity.count">
+            <summary>
+            状态数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.StatusListEntity.status_list">
+            <summary>
+            所有状态信息
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Entities.UpdateInfoEntity.UpdateType">
+            <summary>
+            0：没有更新；1：有强制更新；2：有可选更新；3：有提示评价/活动
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.session_key">
+            <summary>
+            表示当前用户的session_key，有一定的有效期。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.ticket">
+            <summary>
+            用户的票。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.uid">
+            <summary>
+            表示当前用户的ID。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.secret_key">
+            <summary>
+            用户的密钥。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.user_name">
+            <summary>
+            用户名。
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.head_url">
+            <summary>
+            用户的头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.now">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserEntity.is_online">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Helper.DeviceInfoAdaptor">
+            <summary>
+            The Fetch device info Adaptor
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Helper.DeviceInfoAdaptor._target">
+            <summary>
+            The target implementation
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Helper.DeviceInfoAdaptor.#ctor(RenrenCore.Helper.DeviceInfoAdaptor.ImplType)">
+            <summary>
+            Construct: using the implementtation type
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="T:RenrenCore.Helper.DeviceInfoAdaptor.ImplType">
+            <summary>
+            Define the overall implementation type
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Helper.RemoteErrorMsgTranslator">
+            <summary>
+            The remote error message translate class
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Helper.RemoteErrorMsgTranslator._instance">
+            <summary>
+            The singleton property
+            </summary>
+        </member>
+        <member name="P:RenrenCore.Helper.RemoteErrorMsgTranslator.Ready">
+            <summary>
+            Is this component ready to use, since it's initialized in background thread
+            </summary>
+        </member>
+        <member name="P:RenrenCore.Helper.RemoteErrorMsgTranslator.ErrorTable">
+            <summary>
+            The error translator table used to translate the error message
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.user_id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.user_name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.head_url">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.is_star">
+            <summary>
+            来访时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.network">
+            <summary>
+            用户所属网络列表
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.gender">
+            <summary>
+            性别（1：男，0：女）
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.birth">
+            <summary>
+            用户生日
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.hometown_province">
+            <summary>
+            家乡 省
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.hometown_city">
+            <summary>
+            家乡 城市
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.status">
+            <summary>
+            用户最新的状态
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.is_friend">
+            <summary>
+            与登录用户是否是好友(1:是，2：不是)
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.visitor_count">
+            <summary>
+            访问人数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.blog_count">
+            <summary>
+            日志数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.album_count">
+            <summary>
+            相册数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.friend_count">
+            <summary>
+            好友数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.gossip_count">
+            <summary>
+            留言数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.share_friends_count">
+            <summary>
+            与登录用户的共同好友数
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.has_right">
+            <summary>
+            是否有访问权限（0:有，1：没有）
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.UserInfoEntity.vip_level">
+            <summary>
+            vip等级(1-6)
+            </summary>
+        </member>
+        <!-- 对于成员“F:RenrenCore.Entities.UserInfoEntity.vip_stat”忽略有格式错误的 XML 注释 -->
+        <member name="F:RenrenCore.Entities.UserInfoEntity.lagerHeaderUrl">
+            <summary>
+            大头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorsEntity.count">
+            <summary>
+            最近访问者数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorsEntity.page_size">
+            <summary>
+            表示当前分页每页的数量
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorsEntity.visitor_list">
+            <summary>
+            所有最近访问者信息
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.user_id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.user_name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.user_head">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.large_head">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.time">
+            <summary>
+            来访时间
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.is_online">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="F:RenrenCore.Entities.VisitorUserEntity.gender">
+            <summary>
+            ？
+            </summary>
+        </member>
+        <member name="T:RenrenCore.RRServices.RRServiceBase`2">
+            <summary>
+            Generic Renren Service Base class based on id
+            In charge of containing the common data using flyweighter and interfaces of all view model.
+            We can put some generic interface or common data here,
+            Since the renren serice apis have lots of different inputs, so in the init version,
+            we just put the common data and some request interfaces in the base class, and later on, we can abstract 
+            the more common interface in it.
+            \note: id in this class means some kind of key linked to data model, for example:
+            in feedlist view model id means user id;
+            in nearby place view model id means the poi id
+            </summary>
+            <typeparam name="IdType">The id type</typeparam>
+            <typeparam name="EntityType">The entity type</typeparam>
+        </member>
+        <member name="M:RenrenCore.RRServices.RRServiceBase`2.Request(System.Object[])">
+            <summary>
+            Self request and update
+            \note: this is a async await interface
+            </summary>
+            <param name="args">the input arguments</param>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.RRServiceBase`2.RequestById(`0,System.Object[])">
+            <summary>
+            Request and update by id
+            \note: this is a async await interface
+            </summary>
+            <param name="args">the input arguments</param>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.RRServiceBase`2.Reset">
+            <summary>
+            Reset total view model instance
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.RRServiceBase`2.Model">
+            <summary>
+            The self Data model
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.RRServiceBase`2.NeedCache">
+            <summary>
+            Flag, getter and setter the cache switcher
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.RRServiceBase`2.Item(`0)">
+            <summary>
+            The Data model of view by id
+            </summary>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.AlbumListService.DoReset">
+            <summary>
+            Reset overall models
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.AlbumListService.#ctor">
+            <summary>
+            private construct to protected against the outside create
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.AlbumListService.Instance">
+            <summary>
+            Singleton property
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.AlbumService.DoReset">
+            <summary>
+            Reset overall models
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.AlbumService.#ctor">
+            <summary>
+            private construct to protected against the outside create
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.AlbumService.Instance">
+            <summary>
+            Singleton property
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.CalculateDistanceService.CalculateDistance(System.Int64,System.Int64,System.String,System.Int32,System.Int32)">
+            <summary>
+            计算某个gps位置与某个pid之间的距离  
+            </summary>
+            <param name="lat_gps">纬度</param>
+            <param name="lon_gps">经度</param>
+            <param name="pid">pid</param>
+            <param name="radius">是否过远的半径，单位为公里</param>
+            <param name="d">使用的是否是真实经纬度</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.LBSAddPoiService.AddPoi(System.Int64,System.String,System.Int64,System.Int64,System.String,System.String,System.Int32)">
+            <summary>
+            创建POI  
+            </summary>
+            <param name="request_time">请求时间</param>
+            <param name="name">POI的名字</param>
+            <param name="lat_gps">纬度</param>
+            <param name="lon_gps">经度</param>
+            <param name="address">POI的地址</param>
+            <param name="type">POI的类型</param>
+            <param name="d">使用的是否是真实经纬度</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.LBSFriendListService.RequestFriendList(System.Int64,System.Int64,System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取好友列表 
+            </summary>
+            <param name="_lat">纬度</param>
+            <param name="_lon">经度</param>
+            <param name="_d">使用的是否是真实经纬度</param>
+            <param name="_page">分页值</param>
+            <param name="_pagesize">分页信息条目数</param>
+            <param name="_ordertype">time(时间倒序)/distance（距离正序)</param>
+            <param name="_datatype">all(所有数据)/near（附近的数据)</param>
+            <param name="_radius">判断附近的半径,单位为公里</param>
+            <param name="_exclude_list">是否包含commentlist 为1时表示不包含</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.LBSGetPoiCategoryService.GetPoiCategory(System.String)">
+            <summary>
+            获取poi类型
+            </summary>
+            <param name="data_type">为compression的时候，返回值做gzip加密</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.LBSGetStaticMapByPidService.GetStaticMapByPid(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据PID获取静态地图的URL
+            </summary>
+            <param name="pid">pid</param>
+            <param name="pointName">标注的名称</param>
+            <param name="height">地图的高度，单位为像素</param>
+            <param name="width">地图的宽度，单位为像素</param>
+            <param name="zoom">地图的zoom值(1-11)</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.LBSNearbyFeedListService.RequestNearbyFeed(System.Int64,System.Int64,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取某个poi或者某个经纬度附近的新鲜事,按poi取的时候不包括此poi信息 
+            </summary>
+            <param name="lat_gps">纬度</param>
+            <param name="lon_gps">经度</param>
+            <param name="pid">pid</param>
+            <param name="page">分页页码</param>
+            <param name="page_size">每页的数据量</param>
+            <param name="ubb">返回值ubb转换</param> 
+            <param name="radius">判断附近的半径,单位为公里</param>
+            <param name="d">使用的是否是真实经纬度</param> 
+        </member>
+        <member name="M:RenrenCore.RRServices.NearbyActivityListService.RequestNearbyActivityListByLatlon(System.Int64,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            返回某个经纬度周边的活动poi列表; 如果该地点有一个活动，则返回该活动URL地址；如果该地点有多个活动，则返回地点map，活动列表URL
+            </summary>
+            <param name="lat_gps">纬度</param>
+            <param name="lon_gps">经度</param>
+            <param name="page">分页页码</param>
+            <param name="page_size">每页的数据量</param>
+            <param name="radius">判断附近的半径，单位为公里</param>
+            <param name="exclude_list">是否不返回活动列表数据</param>
+            <param name="d">传的经纬度是否需要偏转</param>
+            <param name="event_type">活动的类型：event_type=1优惠券；event_type=2团购；event_type=3活动；event_type=4 全部</param>
+            <param name="poitype">地点分类。包括美食、娱乐、生活、购物、运动、酒店、其他，取全部分类时传空即可</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.NearbyActivityNoticeCountService.RequestNearbyActivityNoticeCount(System.Int64,System.Int64,System.Int32,System.Int32)">
+            <summary>
+            返回附近的活动或好友活动的数量 
+            </summary>
+            <param name="lat_gps">纬度</param>
+            <param name="lon_gps">经度</param>
+            <param name="_radius">判断附近的半径,单位为公里</param>
+            <param name="_d">使用的是否是真实经纬度</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.PoiBaseInfoService.RequestPoiBaseInfoByPid(System.String,System.Int32,System.Int32)">
+            <summary>
+            返回某个poi的基本信息
+            </summary>
+            <param name="pid">pid</param>
+            <param name="ubb">返回值ubb转换</param>
+            <param name="radius">查找半径，单位为米</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.PoiListService.RequestPoiList(System.Int64,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取poi列表 
+            </summary>
+            <param name="_lat">纬度</param>
+            <param name="_lon">经度</param>
+            <param name="_radius">查找半径</param>
+            <param name="_d">使用的是否是真实经纬度</param>
+            <param name="_page">分页值</param>
+            <param name="_pagesize">分页信息条目数</param>
+            <param name="keyword">查询的关键字</param>
+        </member>
+        <member name="T:RenrenCore.RRServices.LoginService">
+            <summary>
+            LoginService
+            In charge of the login page's control and data issues
+            \note: this class is defined as singleton since it will be easily used in global
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.LoginService.Login(System.String,System.String)">
+            <summary>
+            User login interface
+            The wrapped convient method provided for outside call
+            </summary>
+            <param name="userName">user name</param>
+            <param name="password">password</param>
+            <returns>The aync error wrapped value</returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.LoginService.#cctor">
+            <summary>
+            private construct to protected against the outside create
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.LoginService.Instance">
+            <summary>
+            Singleton property
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.OauthService.StoredToken">
+            <summary>
+            get stored setting from local
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.OauthService.Logout">
+            <summary>
+            Oauth2.0 logout
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.OauthService.SaveKeys(System.String,System.String)">
+            <summary>
+            save keys
+            </summary>
+            <param name="api_key"></param>
+            <param name="SecretKey"></param>
+            <returns>if successed then return true.</returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.OauthService.UpdateToken(System.String,System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.String,System.Int32)">
+            <summary>
+            强制更新Access-Token 
+            </summary>
+            <param name="api_key">API_KEY</param>
+            <param name="SecretKey">SecretKey</param>
+            <param name="redirect_uri">指向重定向服务器，能够解析OAuth服务器返回的code</param>
+            <param name="scope">申请的API权限</param>
+            <param name="switchUser">选择是否更改用户</param>
+            <param name="cancel_url">用户取消授权时的跳转页面</param>
+            <param name="show_header">查询的是否隐藏头像</param>
+        </member>
+        <member name="M:RenrenCore.RRServices.OauthService.Login(System.String,System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.String,System.Int32)">
+            <summary>
+            Oauth2.0 Login
+            </summary>
+            <param name="api_key">API_KEY</param>
+            <param name="SecretKey">SecretKey</param>
+            <param name="redirect_uri">指向重定向服务器，能够解析OAuth服务器返回的code</param>
+            <param name="scope">申请的API权限</param>
+            <param name="switchUser">选择是否更改用户</param>
+            <param name="cancel_url">用户取消授权时的跳转页面</param>
+            <param name="show_header">查询的是否隐藏头像</param>
+        </member>
+        <member name="T:RenrenCore.RRServices.RRServiceFlyweight`2">
+            <summary>
+            View data model storage flyweight 
+            </summary>
+            <typeparam name="IdType"></typeparam>
+            <typeparam name="EntityType"></typeparam>
+        </member>
+        <member name="M:RenrenCore.RRServices.UserInfoService.RequestMyUserInfo">
+            <summary>
+            Request and update self user info
+            The wrapped convient method provided for outside call
+            </summary>
+            <returns>The info result</returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.UserInfoService.RequestUserInfoByUid(System.Int32)">
+            <summary>
+            Request and update the user info by uid
+            The wrapped convient method provided for outside call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.UserInfoService.#ctor">
+            <summary>
+            private construct to protected against the outside create
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.UserInfoService.Instance">
+            <summary>
+            Singleton property
+            </summary>
+        </member>
+        <member name="T:RenrenCore.Views.OatuthLogin">
+            <summary>
+            An empty page that can be used on its own or navigated to within a Frame.
+            </summary>
+        </member>
+        <member name="M:RenrenCore.Views.OatuthLogin.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property is typically used to configure the page.</param>
+        </member>
+        <member name="M:RenrenCore.Views.OatuthLogin.GetQueryString(System.Uri,System.String)">
+            <summary>
+            不区分大小写,获得querysring中的值
+            </summary>
+            <param name="url"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

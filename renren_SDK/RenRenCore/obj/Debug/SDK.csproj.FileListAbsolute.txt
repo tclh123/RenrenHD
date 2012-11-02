@@ -1,0 +1,8 @@
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\SDK.csprojResolveAssemblyReference.cache
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.g.cs
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.g.i.cs
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.g.cs
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\XamlTypeInfo.g.cs
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.xaml
+C:\Projects\VS2012\App1\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.xaml

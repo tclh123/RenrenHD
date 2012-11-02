@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TCLH123MBP</Machine>
+    <WindowsUser>tclh123</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>D09E9621A6475E60FCAB5002589482D0D0340071EDEDF1B13BD1115F6E17741B</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a18af0aa-9e33-4324-bfac-c93ab4d90fc2_1.0.0.0_neutral__dzyp8en84k9bp</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a18af0aa-9e33-4324-bfac-c93ab4d90fc2_dzyp8en84k9bp!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>a18af0aa-9e33-4324-bfac-c93ab4d90fc2</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=tclh123</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-01T18:33:36.692</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.exe">
+      <PackagePath>RenrenHD.exe</PackagePath>
+      <Modified>2012-11-01T18:35:59.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.pdb">
+      <PackagePath>RenrenHD.pdb</PackagePath>
+      <Modified>2012-11-01T18:35:59.142</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pdb">
+      <PackagePath>NetworkLayer.pdb</PackagePath>
+      <Modified>2012-11-01T10:06:32.542</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.pdb">
+      <PackagePath>RenrenCore.pdb</PackagePath>
+      <Modified>2012-11-01T16:54:15.578</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.dll">
+      <PackagePath>NetworkLayer.dll</PackagePath>
+      <Modified>2012-11-01T10:06:32.560</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.dll">
+      <PackagePath>RenrenCore.dll</PackagePath>
+      <Modified>2012-11-01T16:54:15.630</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2012-11-01T16:51:51.708</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-07-26T12:23:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2012-11-01T17:44:47.372</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\FeedView.xaml">
+      <PackagePath>Views\FeedView.xaml</PackagePath>
+      <Modified>2012-11-01T18:28:34.804</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\HomePage.xaml">
+      <PackagePath>Views\HomePage.xaml</PackagePath>
+      <Modified>2012-11-01T18:32:17.411</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>RenrenCore\Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-21T04:13:24.495</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\Views\OatuthLogin.xaml">
+      <PackagePath>RenrenCore\Views\OatuthLogin.xaml</PackagePath>
+      <Modified>2012-06-21T04:13:24.964</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\Common\ReadMe.txt">
+      <PackagePath>RenrenCore\Common\ReadMe.txt</PackagePath>
+      <Modified>2012-06-21T04:13:24.558</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\Resources\Texts\RemoteErrorTranslator.txt">
+      <PackagePath>RenrenCore\Resources\Texts\RemoteErrorTranslator.txt</PackagePath>
+      <Modified>2012-06-21T04:13:25.308</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-11-01T18:33:36.525</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

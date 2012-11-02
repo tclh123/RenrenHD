@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TCLH123MBP</Machine>
+    <WindowsUser>tclh123</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.exe">
+      <PackagePath>RenrenHD.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.pdb">
+      <PackagePath>RenrenHD.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pdb">
+      <PackagePath>NetworkLayer.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.pdb">
+      <PackagePath>RenrenCore.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.dll">
+      <PackagePath>NetworkLayer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.dll">
+      <PackagePath>RenrenCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\FeedView.xaml">
+      <PackagePath>Views\FeedView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\HomePage.xaml">
+      <PackagePath>Views\HomePage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>RenrenCore\Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\bin\Debug\Views\OatuthLogin.xaml">
+      <PackagePath>RenrenCore\Views\OatuthLogin.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\Common\ReadMe.txt">
+      <PackagePath>RenrenCore\Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\Resources\Texts\RemoteErrorTranslator.txt">
+      <PackagePath>RenrenCore\Resources\Texts\RemoteErrorTranslator.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
