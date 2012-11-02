@@ -36,6 +36,17 @@ namespace RenrenHD.Views
         /// 属性通常用于配置页。</param>
         async protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            System.Collections.ObjectModel.ObservableCollection<object> ItemList = new System.Collections.ObjectModel.ObservableCollection<object>();
+            foreach (View s in Constants.ViewList)
+            {
+                ListBoxItem item = new ListBoxItem();
+                item.Content = s;
+                item.Name = s.ClassType.FullName;
+                ItemList.Add(item);
+            }
+            lstViews.ItemsSource = ItemList;
+
+            //get my user info
             var info = await UserInfoService.Instance.RequestMyUserInfo();
             imgHead.Source = new BitmapImage(new Uri(info.Result.Head_url));
             txtName.Text = info.Result.User_name;
@@ -43,10 +54,13 @@ namespace RenrenHD.Views
 
         private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            var tag = (e.AddedItems.FirstOrDefault() as ListBoxItem).Tag;
+            if (lstViews.SelectedItem != null)
+            {
+                ListBoxItem selectedListBoxItem = lstViews.SelectedItem as ListBoxItem;
 
-            //TODO: 如何根据tag来navigate?
-            frmContent.Navigate(typeof(FeedView));
+                View to = selectedListBoxItem.Content as View;
+                frmContent.Navigate(to.ClassType);
+            }
         }
     }
 }

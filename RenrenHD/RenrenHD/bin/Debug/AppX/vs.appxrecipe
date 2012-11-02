@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-01T18:33:36.692</Modified>
+      <Modified>2012-11-02T11:28:55.977</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.exe">
       <PackagePath>RenrenHD.exe</PackagePath>
-      <Modified>2012-11-02T09:50:46.807</Modified>
+      <Modified>2012-11-02T12:03:41.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.pdb">
       <PackagePath>RenrenHD.pdb</PackagePath>
-      <Modified>2012-11-02T09:50:46.791</Modified>
+      <Modified>2012-11-02T12:03:41.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pdb">
       <PackagePath>NetworkLayer.pdb</PackagePath>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-07-26T12:23:38.000</Modified>
+      <Modified>2012-11-02T11:54:54.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
@@ -78,11 +78,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\FeedView.xaml">
       <PackagePath>Views\FeedView.xaml</PackagePath>
-      <Modified>2012-11-02T09:50:37.694</Modified>
+      <Modified>2012-11-02T11:36:43.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\HomePage.xaml">
       <PackagePath>Views\HomePage.xaml</PackagePath>
-      <Modified>2012-11-01T18:32:17.411</Modified>
+      <Modified>2012-11-02T12:03:38.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>RenrenCore\Common\StandardStyles.xaml</PackagePath>

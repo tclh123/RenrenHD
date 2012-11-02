@@ -41,6 +41,7 @@ namespace RenrenHD
         /// 属性通常用于配置页。</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            
         }
 
         //oauth 授权完成事件通知

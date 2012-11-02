@@ -13,7 +13,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
         <ListView x:Name="lstFeeds">
             <ListView.ItemTemplate>
                 <DataTemplate>

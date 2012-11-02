@@ -6,6 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
+    <!--AppBar-->
+    <Page.TopAppBar>
+        <AppBar>
+            <Grid>
+                <Button HorizontalAlignment="Left"
+                        Content="nihao" 
+                        />
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Page.BottomAppBar>
+        <AppBar>
+            <Grid>
+                <Button HorizontalAlignment="Left"
+                        Style="{StaticResource HomeAppBarButtonStyle}" />
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    <!--/AppBar-->
 
     <Grid x:Name="grdMain" 
           Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
@@ -17,7 +38,7 @@
         
         <Grid x:Name="grdSideBar" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="150"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
@@ -26,7 +47,7 @@
                 <TextBlock x:Name="txtName" Text="Name" FontSize="30" HorizontalAlignment="Center" />
             </StackPanel>
             
-            <ListBox x:ConnectionId='1' Grid.Row="1"                                              >
+            <ListBox x:ConnectionId='1' x:Name="lstViews" Grid.Row="1"                                              >
                 <ListBoxItem Tag="Feed">
                     <TextBlock Text="新鲜事"></TextBlock>
                 </ListBoxItem>
