@@ -39,3 +39,44 @@ C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\HomePage.xaml
 C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.g.i.cs
 C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.g.cs
 C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.exe
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.pdb
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\resources.pri
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\AppxManifest.xml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.build.appxrecipe
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\NetworkLayer.dll
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenCore.dll
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\NetworkLayer.pdb
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\NetworkLayer.pri
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenCore.pdb
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenCore.pri
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\RenrenHD.csprojResolveAssemblyReference.cache
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\App.g.i.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\App.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Common\StandardStyles.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\MainPage.g.i.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\MainPage.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.g.i.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\HomePage.g.i.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\HomePage.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\XamlTypeInfo.g.cs
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\App.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Common\StandardStyles.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\MainPage.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\FeedView.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\Views\HomePage.xaml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\RenrenHD.exe
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\RenrenHD.pdb
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\RenrenHD.csproj.GenerateResource.Cache
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\priconfig.xml.intermediate
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\layout.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\resources.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\pri.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\priconfig.xml
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\layout.resfiles
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\resources.resfiles
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\pri.resfiles
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\LanguageQualifiers.txt
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\obj\Debug\ProjectArchitectures.txt

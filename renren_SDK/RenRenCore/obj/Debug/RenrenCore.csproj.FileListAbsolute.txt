@@ -72,3 +72,29 @@ C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\obj\Debug\layout.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\obj\Debug\resources.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\obj\Debug\pri.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\obj\Debug\LanguageQualifiers.txt
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\SDK.XML
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.dll
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.pdb
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\RenrenCore.pri
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\NetworkLayer.dll
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\NetworkLayer.pdb
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\bin\Debug\NetworkLayer.pri
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\RenrenCore.csprojResolveAssemblyReference.cache
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.g.cs
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.g.i.cs
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.g.cs
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\XamlTypeInfo.g.cs
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Common\StandardStyles.xaml
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\Views\OatuthLogin.xaml
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\RenrenCore.dll
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\RenrenCore.pdb
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\priconfig.xml.intermediate
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\layout.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\resources.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\pri.resfiles.intermediate
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\priconfig.xml
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\layout.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\resources.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\pri.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\obj\Debug\LanguageQualifiers.txt

@@ -50,8 +50,15 @@ namespace RenrenHD
             scope.Add(@"place.getStaticMapByPid");
 
             scope.Add(@"place.getPoiBaseInfoByPid");
-            scope.Add(@"place.calculateDistance");                
-        
+            scope.Add(@"place.calculateDistance");
+            
+            scope.Add(@"feed.read");
+            scope.Add(@"feed.publishFeed");
+            scope.Add(@"game.scoreUpload");
+            scope.Add(@"radio.getHome");
+            scope.Add(@"lbs.getNearPosiByBound");
+            scope.Add(@"page.becomeFan");
+            scope.Add(@"news.getCount");
         }
 
         /// <summary>

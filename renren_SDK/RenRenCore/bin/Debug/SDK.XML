@@ -184,6 +184,10 @@
         </member>
         <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String)">
             <summary>
+            
+            NOTE: 修改api的方法，把 参数sessionkey 改成 access_token。
+            
+            @Modified By tclh123
             获取登录用户新鲜事
             </summary>
             <param name="sessionKey"></param>
@@ -191,6 +195,7 @@
         </member>
         <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String,System.Int32)">
             <summary>
+            @Modified By tclh123
             获取指定用户新鲜事
             </summary>
             <param name="sessionKey"></param>
@@ -199,6 +204,7 @@
         </member>
         <member name="M:RenrenCore.Apis.API.GetFeedList(System.String,System.String,System.Int32,System.Int32,System.Int32)">
             <summary>
+            @Modified By tclh123
             获取新鲜事（可扩展）
             </summary>
             <param name="sessionKey"></param>
@@ -209,6 +215,7 @@
         </member>
         <member name="M:RenrenCore.Apis.API.GetUserInfo(System.String,System.String)">
             <summary>
+            @Modified By tclh123
             获取登录用户账户信息
             </summary>
             <param name="sessionKey"></param>
@@ -216,6 +223,7 @@
         </member>
         <member name="M:RenrenCore.Apis.API.GetUserInfo(System.String,System.String,System.Int32)">
             <summary>
+            @Modified By tclh123
             获取指定用户账户信息
             </summary>
             <param name="sessionKey"></param>
@@ -4101,6 +4109,59 @@
             </summary>
         </member>
         <member name="P:RenrenCore.RRServices.LoginService.Instance">
+            <summary>
+            Singleton property
+            </summary>
+        </member>
+        <member name="T:RenrenCore.RRServices.NewFeedsService">
+            <summary>
+            Feeds.
+            </summary>
+        </member>
+        <member name="F:RenrenCore.RRServices.NewFeedsService._hasMore">
+            <summary>
+            是否还有更多新鲜事
+            </summary>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.RequestMyFeedList">
+            <summary>
+            Request and update the self all new feed list
+            The wrapped convient method provided for outside call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.RequestMyFeedList(System.Int32,System.Int32)">
+            <summary>
+            Request and update the self new feed list by page size
+            The wrapped convient method provided for outside call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.RequestFeedListByUid(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Request and update the new feed list by uid
+            The wrapped convient method provided for outside call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.DoRequest(System.Object[])">
+            <summary>
+            Request and update the self friends list
+            </summary>
+            <returns>the async result</returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.DoRequestById(System.Int32,System.Object[])">
+            <summary>
+            Request and update the friends list by uid
+            </summary>
+            <returns>the async result</returns>
+        </member>
+        <member name="M:RenrenCore.RRServices.NewFeedsService.#ctor">
+            <summary>
+            private construct to protected against the outside create
+            </summary>
+        </member>
+        <member name="P:RenrenCore.RRServices.NewFeedsService.Instance">
             <summary>
             Singleton property
             </summary>

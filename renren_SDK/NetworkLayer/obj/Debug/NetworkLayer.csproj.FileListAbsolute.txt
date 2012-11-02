@@ -36,3 +36,13 @@ C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\layout.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\resources.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\pri.resfiles
 C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\LanguageQualifiers.txt
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.dll
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pdb
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pri
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\NetworkLayer.dll
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\NetworkLayer.pdb
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\priconfig.xml
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\layout.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\resources.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\pri.resfiles
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\obj\Debug\LanguageQualifiers.txt

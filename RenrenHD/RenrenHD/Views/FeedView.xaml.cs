@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RenrenCore.RRServices;
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,9 +33,11 @@ namespace RenrenHD.Views
         /// </summary>
         /// <param name="e">描述如何访问此页的事件数据。Parameter
         /// 属性通常用于配置页。</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        async protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             //TODO get Feeds!!
+            var resp = await NewFeedsService.Instance.RequestMyFeedList();
+            var a = 11;
         }
     }
 }

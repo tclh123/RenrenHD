@@ -646,25 +646,31 @@ namespace RenrenCore.Apis
         }
 
         /// <summary>
+        /// 
+        /// NOTE: 修改api的方法，把 参数sessionkey 改成 access_token。
+        /// 
+        /// @Modified By tclh123
         /// 获取登录用户新鲜事
         /// </summary>
         /// <param name="sessionKey"></param>
         /// <param name="userSecretKey"></param>
-        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string sessionKey, string userSecretKey)
+        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string access_token, string userSecretKey)
         {
-            return await GetFeedList(sessionKey, userSecretKey, -1, -1, -1);
+            return await GetFeedList(access_token, userSecretKey, -1, -1, -1);
         }
         /// <summary>
+        /// @Modified By tclh123
         /// 获取指定用户新鲜事
         /// </summary>
         /// <param name="sessionKey"></param>
         /// <param name="userSecretKey"></param>
         /// <param name="userId"></param>
-        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string sessionKey, string userSecretKey, int userId)
+        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string access_token, string userSecretKey, int userId)
         {
-            return await GetFeedList(sessionKey, userSecretKey, -1, -1, userId);
+            return await GetFeedList(access_token, userSecretKey, -1, -1, userId);
         }
         /// <summary>
+        /// @Modified By tclh123
         /// 获取新鲜事（可扩展）
         /// </summary>
         /// <param name="sessionKey"></param>
@@ -672,16 +678,10 @@ namespace RenrenCore.Apis
         /// <param name="page"></param>
         /// <param name="pageSize"></param>
         /// <param name="userId"></param>
-        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string sessionKey, string userSecretKey, int page, int pageSize, int userId)
+        public async Task<RenRenResponseArg<FeedListEntity>> GetFeedList(string access_token, string userSecretKey, int page, int pageSize, int userId)
         {
-            var parameters = ApiHelper.GetBaseParameters(sessionKey).Result;
-            parameters.Add(new RequestParameterEntity("api_key", ConstantValue.ApiKey));
-            parameters.Add(new RequestParameterEntity("method", Method.GetFeed));
-            parameters.Add(new RequestParameterEntity("call_id", ApiHelper.GenerateTime()));
-            parameters.Add(new RequestParameterEntity("v", "1.0"));
-            parameters.Add(new RequestParameterEntity("session_key", sessionKey));
+            var parameters = ApiHelper.GetBaseParameters(Method.GetFeed, access_token);
             parameters.Add(new RequestParameterEntity("type", "102,103,104,110,502,601,701,709,107,2003,2004,2005,2006,2008,2009,2012,2013"));
-
             if (page != -1)
                 parameters.Add(new RequestParameterEntity("page", page.ToString()));
             if (pageSize != -1)
@@ -697,6 +697,7 @@ namespace RenrenCore.Apis
         }
 
         /// <summary>
+        /// @Modified By tclh123
         /// 获取登录用户账户信息
         /// </summary>
         /// <param name="sessionKey"></param>
@@ -706,6 +707,7 @@ namespace RenrenCore.Apis
             return await GetUserInfo(access_token, userSecretKey, -1);
         }
         /// <summary>
+        /// @Modified By tclh123
         /// 获取指定用户账户信息
         /// </summary>
         /// <param name="sessionKey"></param>

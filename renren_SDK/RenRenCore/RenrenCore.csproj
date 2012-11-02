@@ -246,6 +246,7 @@
     <Compile Include="RRServices\LoginService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RRServices\NewFeedsService.cs" />
     <Compile Include="RRServices\OAUTH\OauthService.cs" />
     <Compile Include="RRServices\RRServiceBase.cs" />
     <Compile Include="RRServices\RRServiceFlyweight.cs" />

@@ -96,7 +96,7 @@ namespace RenrenHD
         }
         private void LoginHandler(object sender, RoutedEventArgs e)
         {
-            //OauthService.Instance.ClearToken();
+            OauthService.Instance.ClearToken();
             // Oauth-login
             OauthService.Instance.Login(App.api_key, App.SecretKey, App.redirect_uri, App.scope);
         }

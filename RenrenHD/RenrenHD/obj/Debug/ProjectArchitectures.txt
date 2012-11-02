@@ -1,4 +1,4 @@
-C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\NetworkLayer.csproj;neutral
-C:\Projects\VS2012\RenrenHD\renren_SDK\NetworkLayer\NetworkLayer.csproj;neutral
-C:\Projects\VS2012\RenrenHD\renren_SDK\RenRenCore\RenrenCore.csproj;neutral
-C:\Projects\VS2012\RenrenHD\RenrenHD\RenrenHD\RenrenHD.csproj;neutral
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\NetworkLayer.csproj;neutral
+C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\NetworkLayer.csproj;neutral
+C:\Projects\Source Control\RenrenHD\renren_SDK\RenRenCore\RenrenCore.csproj;neutral
+C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\RenrenHD.csproj;neutral

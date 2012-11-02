@@ -10,7 +10,10 @@ using RenrenCore.Entities;
 
 namespace RenrenCore.RRServices
 {
-    class NewFeedsService : RRServiceBase<int, FeedListEntity>
+    /// <summary>
+    /// Feeds.
+    /// </summary>
+    public sealed class NewFeedsService : RRServiceBase<int, FeedListEntity>
     {
         /// <summary>
         /// Singleton property
@@ -71,20 +74,23 @@ namespace RenrenCore.RRServices
         /// <returns>the async result</returns>
         protected async override Task<RenRenResponseArg<FeedListEntity>> DoRequest(params object[] args)
         {
-            string seesionKey = LoginService.Instance.Model.Session_key;
-            string secrectKey = LoginService.Instance.Model.Secret_key;
+            string access_token = Constants.ConstantValue.access_token;
+            string secrectKey = Constants.ConstantValue.SecretKey;
+
+            //string seesionKey = LoginService.Instance.Model.Session_key;
+            //string secrectKey = LoginService.Instance.Model.Secret_key;
             RenRenResponseArg<FeedListEntity> resp = null;
             if (args.Length > 0) // Get the page size list
             {
                 int page = (int)args[0];
                 int pageSize = args.Length > 1 ? (int)args[1] : 10; // by default, page size is 10
-                resp = await API.Renren3GApi.GetFeedList(seesionKey, secrectKey, page, pageSize, -1);
+                resp = await API.Renren3GApi.GetFeedList(access_token, secrectKey, page, pageSize, -1);
                 if(null != resp && null != resp.Result)
-                    _hasMore = resp.Result.Has_more <= 0 ? false : true;
+                    _hasMore = resp.Result.Has_more <= 0 ? false : true;    //是否有更多新鲜事
             }
             else
             {
-                resp = await API.Renren3GApi.GetFeedList(seesionKey, secrectKey);
+                resp = await API.Renren3GApi.GetFeedList(access_token, secrectKey);
             }
             return resp;
         }
@@ -95,11 +101,11 @@ namespace RenrenCore.RRServices
         /// <returns>the async result</returns>
         protected async override Task<RenRenResponseArg<FeedListEntity>> DoRequestById(int id, params object[] args)
         {
-            string seesionKey = LoginService.Instance.Model.Session_key;
-            string secrectKey = LoginService.Instance.Model.Secret_key;
+            string access_token = Constants.ConstantValue.access_token;
+            string secrectKey = Constants.ConstantValue.SecretKey;
             int page = args.Length > 0 ? (int)args[0] : 1; // by default, page is 1
             int pageSize = args.Length > 1 ? (int)args[1] : 10; // by default, page size is 10
-            RenRenResponseArg<FeedListEntity> resp = await API.Renren3GApi.GetFeedList(seesionKey, secrectKey, page, pageSize, id);
+            RenRenResponseArg<FeedListEntity> resp = await API.Renren3GApi.GetFeedList(access_token, secrectKey, page, pageSize, id);
             return resp;
         }
 

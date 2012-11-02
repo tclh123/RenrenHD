@@ -15,7 +15,9 @@
 
 
         <ListView>
-
+            <DataTemplate>
+                <!--TODO-->
+            </DataTemplate>
         </ListView>
     </Grid>
 </Page>
