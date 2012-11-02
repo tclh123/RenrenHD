@@ -14,10 +14,22 @@
         </Grid.ColumnDefinitions>
 
 
-        <ListView>
-            <DataTemplate>
-                <!--TODO-->
-            </DataTemplate>
+        <ListView x:Name="lstFeeds">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,17">
+                        <TextBlock Text="{Binding User_name}" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Margin="12,-6,12,0"/>
+
+                        <!--<StackPanel Width="400" Visibility="{Binding feed_type, Converter={StaticResource FeedPostToIsImage}}">
+                        <TextBlock Margin="12,0,12,0" TextWrapping="Wrap" Text="{Binding attachment0_content}"></TextBlock>
+                        <Image HorizontalAlignment="Left" Stretch="None" Margin="12,0,12,0" Source="{Binding attachment0_src}"></Image>
+                    </StackPanel>-->
+
+                        <TextBlock Text="{Binding Str_time}" TextWrapping="Wrap" Margin="12,-6,12,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </Page>

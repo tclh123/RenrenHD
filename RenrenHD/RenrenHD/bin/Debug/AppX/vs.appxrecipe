@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.exe">
       <PackagePath>RenrenHD.exe</PackagePath>
-      <Modified>2012-11-02T09:09:51.823</Modified>
+      <Modified>2012-11-02T09:50:46.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\RenrenHD.pdb">
       <PackagePath>RenrenHD.pdb</PackagePath>
-      <Modified>2012-11-02T09:09:51.800</Modified>
+      <Modified>2012-11-02T09:50:46.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\renren_SDK\NetworkLayer\bin\Debug\NetworkLayer.pdb">
       <PackagePath>NetworkLayer.pdb</PackagePath>
@@ -78,7 +78,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\FeedView.xaml">
       <PackagePath>Views\FeedView.xaml</PackagePath>
-      <Modified>2012-11-01T18:41:27.470</Modified>
+      <Modified>2012-11-02T09:50:37.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\Source Control\RenrenHD\RenrenHD\RenrenHD\bin\Debug\Views\HomePage.xaml">
       <PackagePath>Views\HomePage.xaml</PackagePath>

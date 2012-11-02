@@ -37,7 +37,8 @@ namespace RenrenHD.Views
         {
             //TODO get Feeds!!
             var resp = await NewFeedsService.Instance.RequestMyFeedList();
-            var a = 11;
+            
+            lstFeeds.ItemsSource = resp.Result.Feed_list;
         }
     }
 }
